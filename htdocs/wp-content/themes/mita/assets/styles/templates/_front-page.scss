@@ -1,0 +1,30 @@
+/* ==========================================================================
+  Templates - Front page
+========================================================================== */
+
+.home {
+  #main {
+    background: $blue;
+    background-image: linear-gradient($blue, lighten($blue, 6));
+    color: $white;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    max-width: none;
+    margin-top: 0;
+  }
+  .main-content {
+    @include wrap;
+    max-width: 720px;
+    padding: 2rem 0;
+    font-weight: $bold;
+    p {
+      line-height: 1.5;
+    }
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
+  aside {
+    @include wrap;
+  }
+}

@@ -1,0 +1,82 @@
+/* ==========================================================================
+  Elements - Stories (newest)
+========================================================================== */
+
+.stories-newest {
+
+}
+
+.stories-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.stories-newest-title {
+  display: block;
+  margin-bottom: 2.5rem;
+  color: $green-light;
+}
+
+.story-teaser {
+  border: 1px solid $grey-light;
+  padding: 1rem;
+  width: 100%;
+  position: relative;
+  padding-bottom: 3rem;
+  &.flex-filler {
+    display: none;
+  }
+  @include breakpoint($s) {
+    width: calc(50% - .75rem);
+    &.flex-filler {
+      display: block;
+    }
+  }
+  @include breakpoint($m) {
+    width: calc(33.3333% - .75rem);
+  }
+
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: $base-font-color;
+  transition: .2s ease;
+  &:hover, &:focus, &:active {
+    transform: translateY(-.25rem);
+    border-color: $green-light;
+    border-width: 2px;
+    //padding: calc(1rem - 1px);
+  }
+  &.flex-filler {
+    opacity: 0;
+  }
+  .excerpt {
+    p {
+      font-size: .9375rem;
+    }
+    :last-child {
+      margin-bottom: 0;
+    }
+
+  }
+  .story-meta {
+    line-height: 1.5;
+    font-size: .9375rem;
+    display: inline-block;
+    font-weight: $bold;
+    margin-bottom: .5rem;
+  }
+  .dw-reactions {
+    border: 0;
+    padding: 0;
+    margin-bottom: 0;
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+  }
+}
+
+.flex-filler {
+  height: 1px;
+  margin-top: -1px;
+}

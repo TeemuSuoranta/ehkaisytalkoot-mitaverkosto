@@ -1,0 +1,49 @@
+/* ==========================================================================
+  Elements - Forms
+========================================================================== */
+
+.libre-form {
+  label {
+    display: block;
+    font-weight: $bold;
+    margin-bottom: .375rem;
+    line-height: 1.25;
+  }
+  input,
+  textarea {
+    width: 100%;
+    border: 1px solid $grey;
+    transition: .2s ease;
+    &:focus {
+      border-color: $base-font-color;
+      outline: 0;
+    }
+  }
+  // honey pot
+  p.email {
+    @include visuallyhidden;
+  }
+  label.required {
+    &:after {
+      content: '*';
+      color: $red;
+      padding-left: .1rem;
+    }
+  }
+  button {
+    @include button-reset;
+    display: inline-block;
+    background: $blue;
+    font-weight: $bold;
+    line-height: 1.25;
+    color: $white;
+    padding: .875rem 1rem;
+    min-width: 10rem;
+  }
+}
+
+.wplf-success {
+  display: block;
+  border: .375rem solid $green-light;
+  padding: 1rem;
+}

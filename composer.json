@@ -56,13 +56,22 @@
     "koodimonni/composer-dropin-installer": ">=0.2.4",
     "vlucas/phpdotenv": "1.0.9",
 
-    "koodimonni-language/fi": "^4.9",
-    "koodimonni-language/sv_SE": "*",
+    "koodimonni-language/fi": "*",
 
     "seravo/seravo-plugin": ">=1.4.0",
 
-    "wpackagist-plugin/auto-post-thumbnail": "*",
-    "wpackagist-plugin/google-analytics-dashboard-for-wp": "*",
+    "wpackagist-plugin/advanced-custom-fields": "*",
+    "wpackagist-plugin/autodescription": "*",
+    "wpackagist-plugin/dw-reactions": "*",
+    "wpackagist-plugin/password-protected": "*",
+    "wpackagist-plugin/polylang": "*",
+    "wpackagist-plugin/slack": "*",
+    "wpackagist-plugin/wp-libre-form": "*",
+
+    "aucor/dynamic-mo-loader": "*",
+    "aucor/polylang-copy-content": "*",
+    "aucor/polylang-smart-language-select-disabler": "*",
+    "devgeniem/wp-sanitize-accented-uploads": "*",
 
     "wpackagist-theme/twentyseventeen": "*"
   },

@@ -1,0 +1,31 @@
+/* ==========================================================================
+  Elements - Hero
+========================================================================== */
+
+.hero {
+  background: url('../images/bg-5.jpg');
+  background-size: cover;
+  background-position: 50% 45%;
+}
+
+.hero-content {
+  //@include wrap;
+  min-height: 18rem;
+  background: rgba($blue, .2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .title {
+    display: block;
+    font-family: $font-title;
+    color: $white;
+    text-align: center;
+    font-size: 3rem;
+    @include breakpoint($m) {
+      font-size: 4rem;
+    }
+    @include breakpoint($l) {
+      font-size: 4.5rem;
+    }
+  }
+}

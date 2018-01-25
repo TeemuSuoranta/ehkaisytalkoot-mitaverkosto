@@ -1,0 +1,84 @@
+/* ==========================================================================
+  Templates - Footer
+========================================================================== */
+
+.site-footer-wrap {
+  //background: rgba($grey-light, .5);
+}
+
+.site-footer {
+  @include wrap;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  max-width: 720px;
+  p {
+    font-size: .875rem;
+    &:first-of-type {
+      margin-bottom: .5rem;
+    }
+  }
+}
+
+.cta-section {
+  margin-top: 3rem;
+  background: $blue;
+  background-image: linear-gradient(lighten($blue, 8), $blue);
+  position: relative;
+  .h2 {
+    color: $white;
+    display: block;
+  }
+  .btn-cta {
+    display: inline-block;
+    color: $white;
+    line-height: 1.25;
+    padding: .6875rem 1rem;
+    border: .1875rem solid $green-light;
+    text-decoration: none;
+    font-weight: $bold;
+    font-size: .875rem;
+    text-transform: uppercase;
+    transition: .2s ease;
+    &:hover, &:focus, &:active {
+      background: $green-light;
+      color: $blue;
+    }
+  }
+}
+
+.cta-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: url('../images/bg-3.jpg');
+  background-size: cover;
+  background-position: 50% 45%;
+  opacity: .9;
+  z-index: 1;
+}
+
+.cta-content {
+  @include wrap;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.copyright {
+  background: rgba($grey-light, .25);
+  //border-top: .0625rem solid $grey-light;
+}
+
+.copyright-content {
+  @include wrap;
+  padding: 1rem 0;
+  text-align: center;
+  font-size: .875rem;
+  span {
+    opacity: .75;
+  }
+}
