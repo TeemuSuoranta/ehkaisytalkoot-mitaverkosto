@@ -28,7 +28,7 @@
   </div>
   <div class="copyright">
     <div class="copyright-content">
-      <span>Plan | <?php ask_e('Organization: Name'); ?> | <?php echo date('Y'); ?></span>
+      <span>Plan International Suomi | <?php ask_e('Organization: Name'); ?> | <?php echo date('Y'); ?></span>
     </div>
   </div>
 </div><!-- #page -->
