@@ -38,3 +38,23 @@ function mita_last_edited($asset = 'css') {
   return 0;
 
 }
+
+/**
+ * Clear WPP cache on reaction save
+ *
+ * Reaction Buttons plugin can't do this and won't give us proper hook.
+ * Empty the whole WPP cache when vote is given.
+ *
+ * @param int    $meta_id the ID of meta row
+ * @param int    $object_id the ID of post
+ * @param string $meta_key the meta name
+ * @param string $_meta_value the meta value
+ */
+function mita_flush_reaction_cache($meta_id, $object_id, $meta_key, $_meta_value) {
+
+  if (strstr($meta_key, '_reaction_buttons_') && function_exists('_seravo_purge_cache')) {
+    _seravo_purge_cache();
+  }
+
+}
+add_action('updated_post_meta', 'mita_flush_reaction_cache', 10, 4);

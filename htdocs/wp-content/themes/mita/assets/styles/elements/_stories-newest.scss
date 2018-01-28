@@ -44,7 +44,6 @@
   &:hover, &:focus, &:active {
     transform: translateY(-.25rem);
     border-color: $green-light;
-    border-width: 2px;
     //padding: calc(1rem - 1px);
   }
   &.flex-filler {
@@ -66,13 +65,23 @@
     font-weight: $bold;
     margin-bottom: .5rem;
   }
-  .dw-reactions {
+  .reactions-teaser {
+    @include list-reset;
     border: 0;
     padding: 0;
     margin-bottom: 0;
     position: absolute;
     right: 1rem;
     bottom: 1rem;
+    li {
+      display: inline-block;
+      margin-left: .5rem;
+    }
+    .count {
+      font-size: .9375rem;
+      margin-left: -.2rem; // emojis are very wide, let's go little over them
+      color: $base-font-color;
+    }
   }
 }
 

@@ -62,9 +62,9 @@
 
     "wpackagist-plugin/advanced-custom-fields": "*",
     "wpackagist-plugin/autodescription": "*",
-    "wpackagist-plugin/dw-reactions": "*",
     "wpackagist-plugin/password-protected": "*",
     "wpackagist-plugin/polylang": "*",
+    "wpackagist-plugin/reaction-buttons": "*",
     "wpackagist-plugin/slack": "*",
     "wpackagist-plugin/wp-libre-form": "*",
 

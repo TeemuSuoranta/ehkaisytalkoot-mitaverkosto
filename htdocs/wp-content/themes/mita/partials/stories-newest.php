@@ -30,7 +30,10 @@
 
         <div class="excerpt"><?php the_excerpt(); ?></div>
 
-        <?php dw_reactions($post_id = false, $button = false); ?>
+        <?php
+        //dw_reactions($post_id = false, $button = false);
+        mita_teaser_reactions();
+        ?>
 
       </a>
     <?php endwhile; ?>

@@ -1,0 +1,52 @@
+/* ==========================================================================
+  Elements - Reactions
+========================================================================== */
+
+.reactions {
+  .title {
+    display: block;
+    margin-bottom: 1rem;
+  }
+  ul {
+    @include list-reset;
+  }
+  li {
+    display: inline-block;
+    margin-right: 1rem;
+    & > div {
+      cursor: pointer;
+      border: .125rem solid $grey-light;
+      padding: .5rem 1.25rem;
+      text-align: center;
+      transition: .2s ease;
+      &:hover, &:focus, &:active {
+        border-color: $blue;
+      }
+    }
+    &.voted {
+      & > div {
+        border-color: transparent;
+        cursor: default;
+        &:hover, &:focus, &:active {
+          border-color: transparent;
+        }
+      }
+    }
+    .braces {
+      display: none;
+    }
+    .button_name {
+      padding-left: .2rem;
+      display: block;
+      line-height: 1.25;
+      font-size: 1.5rem;
+    }
+    .button_count {
+      line-height: 1.25;
+    }
+  }
+}
+
+.reaction_buttons_tagline {
+  display: none;
+}

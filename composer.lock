@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2838dfb3244e3ed3da321d533fb19d08",
-    "content-hash": "5d055096b635307a62e9b9aae3c4d08d",
+    "hash": "d96977debc00e2c447c543b1c1d2679c",
+    "content-hash": "4dc1df00eb91aaba7ef217158dfdf417",
     "packages": [
         {
             "name": "aucor/dynamic-mo-loader",
@@ -756,26 +756,6 @@
             "homepage": "https://wordpress.org/plugins/autodescription/"
         },
         {
-            "name": "wpackagist-plugin/dw-reactions",
-            "version": "1.0.1.3",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/dw-reactions/",
-                "reference": "tags/1.0.1.3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/dw-reactions.1.0.1.3.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/dw-reactions/"
-        },
-        {
             "name": "wpackagist-plugin/password-protected",
             "version": "2.1",
             "source": {
@@ -814,6 +794,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/polylang/"
+        },
+        {
+            "name": "wpackagist-plugin/reaction-buttons",
+            "version": "2.1.6",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/reaction-buttons/",
+                "reference": "tags/2.1.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/reaction-buttons.2.1.6.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/reaction-buttons/"
         },
         {
             "name": "wpackagist-plugin/slack",

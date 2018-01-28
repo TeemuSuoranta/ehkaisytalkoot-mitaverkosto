@@ -13,6 +13,7 @@ require_once 'inc/forms.php';                  // forms
 require_once 'inc/hide-users.php';             // hide users' identities
 require_once 'inc/localization.php';           // localization strings and functions
 require_once 'inc/menus.php';                  // menus
+require_once 'inc/reactions.php';              // reactions
 require_once 'inc/remove-commenting.php';      // remove commenting
 require_once 'inc/wp-login.php';               // login screen
 require_once 'inc/wp-settings.php';            // WP settings and optimization

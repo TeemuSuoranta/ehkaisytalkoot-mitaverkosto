@@ -54,6 +54,9 @@ function mita_strings() {
     'Taxonomies: Keywords'               => 'Avainsanat',
     'Taxonomies: Categories'             => 'Kategoriat',
 
+    // reactions
+    'Reactions: Title'                   => 'Valitse reaktiosi',
+
     // call to action
     'CTA: Title'                         => 'Jätä oma tarinasi. Nimettömästi.',
     'CTA: Button'                        => 'Siirry kirjoittamaan',
