@@ -15,21 +15,26 @@
 get_header(); ?>
 
   <div id="primary" class="content-area">
-    <main id="main" class="site-main" role="main">
+    <main id="main" class="site-main index-main" role="main">
 
     <?php if (have_posts()) : ?>
 
       <?php if (is_home() && !is_front_page()) : ?>
         <header>
-          <h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+          <h1 class="page-title"><?php single_post_title(); ?></h1>
         </header>
       <?php endif; ?>
 
-      <?php while (have_posts()) : the_post(); ?>
+      <div class="stories-container">
 
-        <?php get_template_part('partials/content'); ?>
+        <?php while (have_posts()) : the_post(); ?>
 
-      <?php endwhile; ?>
+          <?php get_template_part('partials/teaser-story'); ?>
+
+        <?php endwhile; ?>
+        <span class="flex-filler story-teaser"></span>
+        <span class="flex-filler story-teaser"></span>
+      </div>
 
       <?php mita_numeric_posts_nav(); ?>
 

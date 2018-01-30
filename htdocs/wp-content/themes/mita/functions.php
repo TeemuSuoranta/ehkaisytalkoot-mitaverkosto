@@ -184,4 +184,40 @@ add_action('wp_head',    'mita_favicons');
 add_action('admin_head', 'mita_favicons');
 add_action('login_head', 'mita_favicons');
 
+/**
+ * Add count to pending posts
+ *
+ * @param object $menu a WP menu object
+ *
+ * @return object $menu a WP menu object
+ */
+function mita_show_pending_number($menu) {
+
+  $type = 'post';
+  $status = 'pending';
+
+  $num_posts = get_transient('posts_pending');
+  if (empty($num_posts)) {
+    $num_posts = wp_count_posts($type, 'readable');
+    set_transient('posts_pending', $num_posts, HOUR_IN_SECONDS);
+  }
+
+  $pending_count = 0;
+  if (!empty($num_posts->$status)) {
+    $pending_count = $num_posts->$status;
+  }
+
+  // build string to match in $menu array
+  $menu_str = 'edit.php';
+
+  // loop through $menu items, find match, add indicator
+  foreach ($menu as $menu_key => $menu_data) {
+    if ($menu_str === $menu_data[2]) {
+      $menu[$menu_key][0] .= " <span class='update-plugins count-$pending_count'><span class='plugin-count'>" . number_format_i18n($pending_count) . '</span></span>';
+    }
+  }
+  return $menu;
+
+}
+add_filter('add_menu_classes', 'mita_show_pending_number');
 

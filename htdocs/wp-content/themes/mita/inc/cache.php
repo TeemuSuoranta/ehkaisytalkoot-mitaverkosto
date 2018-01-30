@@ -58,3 +58,22 @@ function mita_flush_reaction_cache($meta_id, $object_id, $meta_key, $_meta_value
 
 }
 add_action('updated_post_meta', 'mita_flush_reaction_cache', 10, 4);
+
+
+/**
+ * Save post metadata when a post is saved.
+ *
+ * @param int     $post_id The post ID.
+ * @param WP_Post $post The post object.
+ * @param bool    $update Whether this is an existing post being updated or not.
+ */
+function mita_flush_pending_cache($post_id, $post, $update) {
+
+  $post_type = get_post_type($post_id);
+
+  if ($post_type === 'post') {
+    delete_transient('posts_pending');
+  }
+
+}
+add_action('save_post', 'mita_flush_pending_cache', 10, 3);

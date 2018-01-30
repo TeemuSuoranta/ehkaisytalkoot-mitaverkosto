@@ -12,13 +12,15 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
   <header class="entry-header">
 
+    <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
+
     <?php
-    if (is_single()) {
-      the_title('<h1 class="entry-title">', '</h1>');
-    } else {
-      the_title('<h2 class="entry-title"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>');
-    }
-    ?>
+      // fetching meta without ACF functions because this is really the only place it's used
+      $orientation = get_post_meta(get_the_ID(), 'orientation', true);
+      if (!empty($orientation)) :
+     ?>
+    <span class="h3"><?php echo esc_html($orientation); ?></span>
+    <?php endif; ?>
 
     <div class="entry-meta">
     </div><!-- .entry-meta -->

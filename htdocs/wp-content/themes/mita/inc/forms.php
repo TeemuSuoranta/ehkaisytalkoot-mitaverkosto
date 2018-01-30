@@ -20,6 +20,7 @@ function mita_form_submission_to_post($return) {
     $gender       = '';
     $orientation  = '';
     $story        = '';
+    $language     = '';
 
     if (isset($_POST['age'])) {
       $age = sanitize_text_field($_POST['age']);
@@ -33,8 +34,13 @@ function mita_form_submission_to_post($return) {
       $orientation = sanitize_text_field($_POST['orientation']);
     }
 
+    if (isset($_POST['language'])) {
+      $language = sanitize_text_field($_POST['language']);
+    }
+
     if (isset($_POST['story'])) {
-      $story = sanitize_text_field($_POST['story']);
+      // can't do sanitize_text_field for story as it may have line breaks
+      $story = wpautop(esc_html($_POST['story']));
     }
 
     // title should be "gender, age"
@@ -48,12 +54,17 @@ function mita_form_submission_to_post($return) {
 
     $post_id = wp_insert_post($args);
 
-    // save meta
     if (is_numeric($post_id)) {
 
+      // save meta
       update_post_meta($post_id, 'age', trim($age));
       update_post_meta($post_id, 'gender', trim($gender));
       update_post_meta($post_id, 'orientation', trim($orientation));
+
+      // set language
+      if (function_exists('pll_set_post_language')) {
+        pll_set_post_language($post_id, $language);
+      }
 
     }
 
@@ -78,12 +89,13 @@ function mita_form_honeypot_validation($return) {
 
   if (isset($_POST['email']) && !empty($_POST['email'])) {
     $return->ok = 0;
+    $return->error = 'You seem to be a spammer. Pls stop.';
   }
 
-  return $retrun;
+  return $return;
 
 }
-//add_action('wplf_validate_submission', 'mita_form_honeypot_validation');
+add_filter('wplf_validate_submission', 'mita_form_honeypot_validation', 100);
 
 
 

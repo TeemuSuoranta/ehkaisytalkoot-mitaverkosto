@@ -75,13 +75,13 @@ hr {
 .entry-header {
   h1, .h1,
   h2, .h2 {
-    margin: 0 0 1rem;
+    margin-bottom: 0;
     a {
       color: $base-font-color;
       text-decoration: none;
     }
   }
-  margin: 0 0 2.25rem;
+  margin: 0 0 1.5rem;
 }
 
 /* Lists

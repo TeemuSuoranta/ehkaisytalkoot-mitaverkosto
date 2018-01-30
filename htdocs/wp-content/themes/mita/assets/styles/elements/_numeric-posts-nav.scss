@@ -15,10 +15,16 @@
     margin: .5rem .25rem;
     a {
       text-decoration: none;
+      font-weight: $bold;
+      color: $base-font-color;
+      font-size: .875rem;
+      padding: .5rem .75rem;
+      border: .0625rem solid $grey-light;
+      transition: .2s ease;
       &:hover,
       &:focus,
       &:active {
-
+        border-color: $blue;
       }
     }
     &.active {
