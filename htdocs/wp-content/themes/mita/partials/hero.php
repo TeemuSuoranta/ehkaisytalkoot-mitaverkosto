@@ -9,6 +9,6 @@
 
 <div class="hero">
   <div class="hero-content">
-    <span class="title">#Ehkäisytalkoot</span>
+    <span class="title"><?php ask_e('Organization: Hashtag'); ?></span>
   </div>
 </div>

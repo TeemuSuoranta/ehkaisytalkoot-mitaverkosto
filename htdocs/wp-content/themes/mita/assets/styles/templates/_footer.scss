@@ -47,14 +47,19 @@
 }
 
 .cta-bg {
+  @include breakpoint($m) {
+    background-image: url('../images/footer-xl.jpg');
+  }
+  @include breakpoint($sub-m) {
+    background-image: url('../images/footer-sm.jpg');
+  }
   position: absolute;
   left: 0;
   top: 0;
   right: 0;
   bottom: 0;
-  background: url('../images/bg-3.jpg');
   background-size: cover;
-  background-position: 50% 45%;
+  background-position: 50% 60%;
   opacity: .925;
   z-index: 1;
 }

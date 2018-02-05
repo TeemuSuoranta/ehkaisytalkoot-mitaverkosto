@@ -19,6 +19,7 @@ function mita_strings() {
 
     // organizaton
     'Organization: Name'                => 'Mitä-verkosto',
+    'Organization: Hashtag'             => '#Ehkäisytalkoot',
 
     // menu
     'Menu: Button label'                => 'Menu',
