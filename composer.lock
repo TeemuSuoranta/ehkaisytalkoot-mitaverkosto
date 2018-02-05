@@ -71,22 +71,22 @@
         },
         {
             "name": "aucor/polylang-smart-language-select-disabler",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aucor/polylang-smart-language-select-disabler.git",
-                "reference": "190b272a67f8ae3a82c4d6ea87350c38d70ec1ea"
+                "reference": "13fd605cc028d4673d2767cc1fd8a5ba7dd3734a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aucor/polylang-smart-language-select-disabler/zipball/190b272a67f8ae3a82c4d6ea87350c38d70ec1ea",
-                "reference": "190b272a67f8ae3a82c4d6ea87350c38d70ec1ea",
+                "url": "https://api.github.com/repos/aucor/polylang-smart-language-select-disabler/zipball/13fd605cc028d4673d2767cc1fd8a5ba7dd3734a",
+                "reference": "13fd605cc028d4673d2767cc1fd8a5ba7dd3734a",
                 "shasum": ""
             },
             "type": "wordpress-plugin",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "GPL-2.0+"
+                "GPL-2.0-or-later"
             ],
             "authors": [
                 {
@@ -95,7 +95,7 @@
                 }
             ],
             "homepage": "https://github.com/aucor/polylang-smart-language-select-disabler",
-            "time": "2018-01-11 07:42:48"
+            "time": "2018-02-05 18:21:54"
         },
         {
             "name": "composer/installers",
