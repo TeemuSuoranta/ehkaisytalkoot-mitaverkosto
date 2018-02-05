@@ -72,24 +72,6 @@ function mita_content_width() {
 add_action('after_setup_theme', 'mita_content_width', 0);
 
 /**
- * Register widget area
- */
-function mita_widgets_init() {
-
-  // register_sidebar(array(
-  //   'name'          => esc_html__('Sidebar', 'mita'),
-  //   'id'            => 'sidebar-1',
-  //   'description'   => '',
-  //   'before_widget' => '<section id="%1$s" class="widget %2$s">',
-  //   'after_widget'  => '</section>',
-  //   'before_title'  => '<h2 class="widget-title">',
-  //   'after_title'   => '</h2>',
-  // ));
-
-}
-add_action('widgets_init', 'mita_widgets_init');
-
-/**
  * TinyMCE formats
  *
  * @link https://codex.wordpress.org/TinyMCE_Custom_Styles
@@ -228,4 +210,23 @@ function mita_show_pending_number($menu) {
 
 }
 add_filter('add_menu_classes', 'mita_show_pending_number');
+
+/**
+ * Show all languages on fi locale
+ *
+ * Needs to be on parse_query so that 'lang' parameter can be in action
+ *
+ * @param WP_Query $wp_query the instance of WP_Query
+ */
+function mita_show_all_locales_in_fi($wp_query) {
+
+  if ($wp_query->is_main_query() && $wp_query->is_home() && !is_admin() && mita_get_site_locale() === 'fi') {
+
+    // resetting the tax_query works when 'lang' paramteter won't
+    $wp_query->set('tax_query', '');
+
+  }
+
+}
+add_action('parse_query', 'mita_show_all_locales_in_fi', 10);
 
