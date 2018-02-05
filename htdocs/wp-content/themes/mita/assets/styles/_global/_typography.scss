@@ -24,6 +24,7 @@ h1, .h1 {
   margin: 0 0 2.25rem; // 36px
   color: $blue;
   font-weight: normal;
+  display: block;
 }
 
 h2, .h2 {
@@ -33,6 +34,7 @@ h2, .h2 {
   margin: 0 0 1.5rem; // 24px
   padding-top: 1.5rem; // 24px
   font-weight: normal;
+  display: block;
 }
 
 h3, .h3 {
@@ -41,6 +43,7 @@ h3, .h3 {
   line-height: 1.5; // 36px
   margin-bottom: 1.5rem; // 24px
   font-weight: normal;
+  display: block;
 }
 
 h4, .h4 {

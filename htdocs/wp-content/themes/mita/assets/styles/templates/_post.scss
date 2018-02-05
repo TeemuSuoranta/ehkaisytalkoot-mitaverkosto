@@ -1,0 +1,38 @@
+/* ==========================================================================
+  Templates - Post
+========================================================================== */
+
+.entry-header-meta {
+  margin-bottom: 2rem;
+  &.h3 {
+    margin-bottom: 0;
+  }
+}
+
+.posts-navigation {
+  margin-top: 2rem;
+  display: flex;
+  .next,
+  .prev {
+    flex-grow: 1;
+  }
+  a {
+    text-decoration: none;
+  }
+  svg {
+    width: .75rem;
+    height: .75rem;
+  }
+  .prev {
+    text-align: right;
+    svg {
+      margin-left: .25rem;
+    }
+  }
+  .next {
+    svg {
+      transform: rotate(180deg);
+      margin-right: .25rem;
+    }
+  }
+}

@@ -15,15 +15,19 @@
     <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
 
     <?php
-      // fetching meta without ACF functions because this is really the only place it's used
+      // fetching meta without ACF functions because this is almost the only place it's used
       $orientation = get_post_meta(get_the_ID(), 'orientation', true);
       if (!empty($orientation)) :
-     ?>
-    <span class="h3"><?php echo esc_html($orientation); ?></span>
+    ?>
+      <span class="h3 entry-header-meta"><?php echo esc_html($orientation); ?></span>
     <?php endif; ?>
 
-    <div class="entry-meta">
-    </div><!-- .entry-meta -->
+    <?php
+      $country = get_post_meta(get_the_ID(), 'country', true);
+      if (!empty($country)) :
+    ?>
+      <span class="h3 entry-header-meta"><?php echo esc_html($country); ?></span>
+    <?php endif; ?>
 
   </header><!-- .entry-header -->
 

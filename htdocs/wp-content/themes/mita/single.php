@@ -16,14 +16,18 @@ get_header(); ?>
 
       <?php get_template_part('partials/content'); ?>
 
-      <?php
-      // if comments are open or we have at least one comment, load up the comment template
-      if (comments_open() || get_comments_number()) {
-        comments_template();
-      }
-      ?>
+
 
     <?php endwhile; ?>
+
+    <div class="posts-navigation">
+      <div class="next">
+        <?php next_post_link('%link', mita_get_svg('caret-right') . ask__('Navigation: Next')); ?>
+      </div>
+      <div class="prev">
+        <?php previous_post_link('%link', ask__('Navigation: Previous') . mita_get_svg('caret-right')); ?>
+      </div>
+    </div>
 
     </main><!-- #main -->
   </div><!-- #primary -->
