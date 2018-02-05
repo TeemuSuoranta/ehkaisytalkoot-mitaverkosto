@@ -20,6 +20,7 @@ function mita_form_submission_to_post($return) {
     $gender       = '';
     $orientation  = '';
     $story        = '';
+    $country      = '';
     $language     = '';
 
     if (isset($_POST['age'])) {
@@ -32,6 +33,10 @@ function mita_form_submission_to_post($return) {
 
     if (isset($_POST['orientation'])) {
       $orientation = sanitize_text_field($_POST['orientation']);
+    }
+
+    if (isset($_POST['location'])) {
+      $country = sanitize_text_field($_POST['location']);
     }
 
     if (isset($_POST['language'])) {
@@ -60,6 +65,7 @@ function mita_form_submission_to_post($return) {
       update_post_meta($post_id, 'age', trim($age));
       update_post_meta($post_id, 'gender', trim($gender));
       update_post_meta($post_id, 'orientation', trim($orientation));
+      update_post_meta($post_id, 'country', trim($country));
 
       // set language
       if (function_exists('pll_set_post_language')) {

@@ -223,6 +223,17 @@ function mita_get_site_locale() {
 }
 
 /**
+ * Add language class in body
+ */
+function mita_language_body_class($class) {
+
+  $class[] = 'lang-' . mita_get_site_locale();
+  return $class;
+
+}
+add_filter('body_class', 'mita_language_body_class');
+
+/**
  * Fallback Polylang (preserve functionality without the plugin)
  */
 if (!function_exists('pll__')) :

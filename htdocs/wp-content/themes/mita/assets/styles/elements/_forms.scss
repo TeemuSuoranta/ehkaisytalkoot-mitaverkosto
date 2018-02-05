@@ -45,6 +45,12 @@
   }
 }
 
+.lang-fi {
+  .country-wrap {
+    display: none;
+  }
+}
+
 .wplf-success {
   display: block;
   border: .375rem solid $green-light;
