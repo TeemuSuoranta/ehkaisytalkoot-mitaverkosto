@@ -66,6 +66,7 @@
     "wpackagist-plugin/polylang": "*",
     "wpackagist-plugin/reaction-buttons": "*",
     "wpackagist-plugin/slack": "*",
+    "wpackagist-plugin/user-role-editor": "*",
     "wpackagist-plugin/wp-libre-form": "*",
 
     "aucor/dynamic-mo-loader": "*",

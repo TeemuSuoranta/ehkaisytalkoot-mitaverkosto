@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d96977debc00e2c447c543b1c1d2679c",
-    "content-hash": "4dc1df00eb91aaba7ef217158dfdf417",
+    "hash": "d759c2b0540d6970dd0cfc625b7086bd",
+    "content-hash": "85674440197b4dcebbc3b365f1f26110",
     "packages": [
         {
             "name": "aucor/dynamic-mo-loader",
@@ -389,10 +389,10 @@
         },
         {
             "name": "koodimonni-plugin-language/woocommerce-fi",
-            "version": "3.2.6",
+            "version": "3.3.0",
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/translation/plugin/woocommerce/3.2.6/fi.zip",
+                "url": "https://downloads.wordpress.org/translation/plugin/woocommerce/3.3.0/fi.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -578,16 +578,16 @@
         },
         {
             "name": "koodimonni/composer-dropin-installer",
-            "version": "1.1.0",
+            "version": "1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Koodimonni/Composer-Dropin-Installer.git",
-                "reference": "b09dd53d7bcbe41afec63bd142b17575935e2349"
+                "reference": "a749f19e3a3bc05529190961ed7529592b20138e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Koodimonni/Composer-Dropin-Installer/zipball/b09dd53d7bcbe41afec63bd142b17575935e2349",
-                "reference": "b09dd53d7bcbe41afec63bd142b17575935e2349",
+                "url": "https://api.github.com/repos/Koodimonni/Composer-Dropin-Installer/zipball/a749f19e3a3bc05529190961ed7529592b20138e",
+                "reference": "a749f19e3a3bc05529190961ed7529592b20138e",
                 "shasum": ""
             },
             "require": {
@@ -617,7 +617,7 @@
                 }
             ],
             "description": "Install packages or a few files from packages into custom paths without overwriting existing stuff.",
-            "time": "2017-01-11 19:10:05"
+            "time": "2018-02-04 10:52:01"
         },
         {
             "name": "seravo/seravo-plugin",
@@ -777,15 +777,15 @@
         },
         {
             "name": "wpackagist-plugin/polylang",
-            "version": "2.2.8",
+            "version": "2.3",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/polylang/",
-                "reference": "tags/2.2.8"
+                "reference": "tags/2.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/polylang.2.2.8.zip",
+                "url": "https://downloads.wordpress.org/plugin/polylang.2.3.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -834,6 +834,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/slack/"
+        },
+        {
+            "name": "wpackagist-plugin/user-role-editor",
+            "version": "4.40",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/user-role-editor/",
+                "reference": "tags/4.40"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/user-role-editor.4.40.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/user-role-editor/"
         },
         {
             "name": "wpackagist-plugin/wp-libre-form",
