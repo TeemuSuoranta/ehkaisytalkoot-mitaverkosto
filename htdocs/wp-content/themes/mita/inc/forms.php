@@ -103,5 +103,17 @@ function mita_form_honeypot_validation($return) {
 }
 add_filter('wplf_validate_submission', 'mita_form_honeypot_validation', 100);
 
+/**
+ * Filter success message for translations
+ *
+ * @param string $success the message for succesful submit
+ *
+ * @return string $success the message for succesful submit
+ */
+function mita_success_message($success) {
 
+  return ask__('Form: Success');
+
+}
+add_filter('wplf_success_message', 'mita_success_message');
 

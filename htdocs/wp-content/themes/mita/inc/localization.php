@@ -69,6 +69,9 @@ function mita_strings() {
     // footer
     'Footer: Description'                => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium at lorem eget faucibus. Vivamus nulla tortor, pulvinar et tempor porttitor, pretium at magna. Donec sagittis ante lorem, et fermentum libero porttitor dapibus. Mauris suscipit, metus id semper consectetur.',
 
+    // form
+    'Form: Success'                      => 'Kiitos viestistäsi!',
+
   );
 
 }
