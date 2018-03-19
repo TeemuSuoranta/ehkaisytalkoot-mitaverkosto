@@ -12,6 +12,7 @@ Working copy of [ehkaisytalkoot.mitaverkosto.fi](https://ehkaisytalkoot.mitaverk
 
 ## Key technologies
 
+* CMS: [WordPress](https://wordpress.org/)
 * Environment: [Seravo/wordpress](https://github.com/Seravo/wordpress)
 * Theme: [Aucor Starter](https://github.com/aucor/aucor-starter)
 * Forms: [WP Libre Form](https://wordpress.org/plugins/wp-libre-form/)
