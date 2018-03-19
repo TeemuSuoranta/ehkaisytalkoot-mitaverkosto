@@ -1,40 +1,31 @@
-# Readme for a Seravo WordPress site
+# Mitä-verkosto: Ehkäisytalkoot
 
-## Details for SSH/SFTP
+Working copy of [ehkaisytalkoot.mitaverkosto.fi](https://ehkaisytalkoot.mitaverkosto.fi).
 
-USER: mitaverkosto-ehkaisytalkoot
-HOST: mitaverkosto-ehkaisytalkoot.fi.seravo.com
-PORT: 10717
+![mita-screenschot-web](https://user-images.githubusercontent.com/9577084/37613160-ffa1289e-2baf-11e8-9618-216f72c5b5ec.jpg)
 
-## Local Development with Git
+## Features
 
-You can start local development by cloning this site to your machine:
+* Users can leave anonymous stories
+* Users can add reactions to stories
+* Information about campaign in Finnish and English
 
-```
-$ git clone ssh://mitaverkosto-ehkaisytalkoot@mitaverkosto-ehkaisytalkoot:10717/data/wordpress ~/Projects/mitaverkosto-ehkaisytalkoot --origin production
-```
+## Key technologies
 
-After you have committed your changes you can push them back:
+* Environment: [Seravo/wordpress](https://github.com/Seravo/wordpress)
+* Theme: [Aucor Starter](https://github.com/aucor/aucor-starter)
+* Forms: [WP Libre Form](https://wordpress.org/plugins/wp-libre-form/)
+* Multilingual: [Polylang](https://wordpress.org/plugins/polylang/)
 
-```
-$ cd ~/Projects/mitaverkosto-ehkaisytalkoot
-$ git push production master
-```
+## How to use
 
-## Documentation
+* It's GPL 2
+* The config.yml is missing to protect some server credentials. Make your own [from example](https://github.com/Seravo/wordpress).
+* Clone this repo and run `vagrant up`.
+* In theme's directory run `yarn install` and `gulp watch` to make changes to css, images or js. More info on theme's README.md.
 
-You can find technical documentation at https://seravo.com/docs/
+## History
 
-## Source code
-
-This site is based on our open sourced WordPress layout: https://github.com/Seravo/wordpress
-
-## How to get help
-
-### Option 1: Open an issue in github
-
-Open a new issue at https://github.com/Seravo/wordpress/issues/
-
-### Option 2: Email us
-
-Send email at wordpress@seravo.com
+* Built pro bono in February 2018.
+* Development and visual design by Teemu Suoranta.
+* Building the site took around two working days.
